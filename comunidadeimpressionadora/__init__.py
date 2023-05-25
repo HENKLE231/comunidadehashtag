@@ -24,5 +24,5 @@ login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 login_manager.login_message_category = 'alert-info'
 
-# Por último, pois precisa do app para ser importada
+# Por último, pois precisa do app para ser importada.
 from comunidadeimpressionadora import routes
