@@ -7,6 +7,7 @@ import sqlalchemy
 
 
 app = Flask(__name__)
+server = app
 
 # No terminal digitar, para gerar um token desses
 # python
@@ -35,6 +36,9 @@ if not inspector.has_table('usuario'):
         print('Base de dados criada')
 else:
     print('Base de dados já existente')
+
+
+server = app.server
 
 # Por último, pois precisa do app para ser importada
 from comunidadeimpressionadora import routes
