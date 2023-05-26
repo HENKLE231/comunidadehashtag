@@ -36,8 +36,5 @@ if not inspector.has_table('usuario'):
 else:
     print('Base de dados já existente')
 
-
-server = app.server
-
 # Por último, pois precisa do app para ser importada
 from comunidadeimpressionadora import routes
