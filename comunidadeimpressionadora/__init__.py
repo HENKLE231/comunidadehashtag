@@ -14,9 +14,8 @@ server = app
 # import secrets
 # secrets.token_hex(16)
 # exit
-app.config['SECRET_KEY'] = '6f93a296d4b6f9a3777617f90c81be12'
-if os.getenv('DATABASE_URL'):
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+if os.getenv('${{Postgres.DATABASE_URL}}'):
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('${{Postgres.DATABASE_URL}}')
 else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///comunidade.db'
 
